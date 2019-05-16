@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Cadastrar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h1 align="center">Cadastrar</h1>
+        <h:form enctype="multipart/form-data">
+            <p:panelGrid columns="2">
+                <h:outputLabel for="Nome" value="Nome"></h:outputLabel>
+                <p:inputText value="#{Controller.nome}" id= "Nome" type="text"></p:inputText>
+                <h:outputLabel for="CPF" value="CPF"></h:outputLabel>
+                <p:inputText value="#{Controller.cpf}" id= "cpf" type="text"></p:inputText>
+                <h:outputLabel for="Telefone" value="Telefone"></h:outputLabel>              
+                <p:inputText value="#{Controller.telefone}" id= "telefone" type="text"></p:inputText>
+                <h:outputLabel for="País" value="Pais"></h:outputLabel>              
+                <p:inputText  value="#{Controller.pais}" id= "pais" type="text"></p:inputText>
+                <h:outputLabel for="Estado" value="Estado"></h:outputLabel>              
+                <p:inputText  value="#{Controller.estado}" id= "estado" type="text"></p:inputText>
+                <h:outputLabel for="Cidade" value="Cidade"></h:outputLabel> 
+                <p:inputText  value="#{Controller.cidade}" id= "cidade" type="text"></p:inputText>
+                <h:outputLabel for="Bairro" value="Bairro"></h:outputLabel> 
+                <p:inputText  value="#{Controller.bairro}" id= "bairro" type="text"></p:inputText>
+                <h:outputLabel for="Numero" value="Numero"></h:outputLabel> 
+                <p:inputText  value="#{Controller.numero}" id= "numero" type="text"></p:inputText>           
+                <h:outputLabel for="Complemento" value="Complemento"></h:outputLabel> 
+                <p:inputText  value="#{Controller.complemento}" id= "complemento" type="text"></p:inputText>
+                <h:outputLabel for="Foto" value="Foto"></h:outputLabel> 
+                <p:fileUpload value="#{Controller.imagem}" mode="simple"/>
+                <p:commandButton value="Cadastrar" actionListener="#{Controller.cadastro()}" update="return"></p:commandButton>
+                <h:outputText id="return" value="#{Controller.retorno}"></h:outputText>
+                    
+            </p:panelGrid>
+      </h:form>
+    </h:body>
+</html>
