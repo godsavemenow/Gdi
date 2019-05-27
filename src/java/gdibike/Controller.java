@@ -5,18 +5,9 @@
  */
 package gdibike;
 
-import javax.servlet.http.Part;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import org.apache.commons.io.IOUtils;
 
 
 /**
@@ -46,7 +37,7 @@ public class Controller {
     public void cadastro() throws IOException{
     
         
-        retorno = nome + "check";
+        retorno = nome + "check"+imagem;
    //insertUser(nome,cpf,telefone,imagem);
    //insertUserAddress(cpf, pais, estado, cidade, bairro, numero, cep);
     
