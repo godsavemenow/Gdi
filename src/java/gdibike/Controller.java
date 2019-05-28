@@ -6,6 +6,8 @@
 package gdibike;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
@@ -34,16 +36,16 @@ public class Controller {
     
     
         
-    public void cadastro() throws IOException{
-        retorno = nome + "check"+imagem;
-        insertUser();
+    public void cadastro() throws IOException, SQLException{
+        //retorno = nome + "check"+imagem;
+            insertUser();
         // insertUser(nome,cpf,telefone,imagem);
         // insertUserAddress(cpf, pais, estado, cidade, bairro, numero, cep);
     }
-    public Cadastro[] getList() {
+    public Cadastro[] getList() throws SQLException {
         return Interface.all_users();
     }
-    public void insertUser() {
+    public void insertUser() throws SQLException {
         Interface.insert(cpf, nome, telefone, imagem, pais, estado, cidade, bairro, numero, cep);
     }
 
