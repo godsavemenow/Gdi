@@ -6,7 +6,14 @@
         <title>GDI</title>
     </h:head>
     <h:body>
-        aa
+        <ui:repeat var="item" value="#{controller.list}">
+            <h:outputText value="#{item.cpf}"></h:outputText>
+            <h:outputText value="#{item.nome}"></h:outputText>
+            <h:outputText value="#{item.telefone}"></h:outputText>
+            <h:outputText value="#{item.endereço}"></h:outputText>
+            <h:graphicImage value="#{item.imagem}"></h:graphicImage>
+            <hr/>
+        </ui:repeat>
     </h:body>
 </html>
 

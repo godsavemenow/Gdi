@@ -35,19 +35,17 @@ public class Controller {
     
         
     public void cadastro() throws IOException{
-    
-        
         retorno = nome + "check"+imagem;
-   //insertUser(nome,cpf,telefone,imagem);
-   //insertUserAddress(cpf, pais, estado, cidade, bairro, numero, cep);
-    
-    
-    
-    
+        insertUser();
+        // insertUser(nome,cpf,telefone,imagem);
+        // insertUserAddress(cpf, pais, estado, cidade, bairro, numero, cep);
     }
-    
-
-
+    public Cadastro[] getList() {
+        return Interface.all_users();
+    }
+    public void insertUser() {
+        Interface.insert(cpf, nome, telefone, imagem, pais, estado, cidade, bairro, numero, cep);
+    }
 
     public String getNome() {
         return nome;
